@@ -1,0 +1,35 @@
+// PlantUML Diagram
+// Save the below code as a .puml file and render it using a PlantUML viewer
+/**
+@startuml
+
+interface Performance {
+    + calculatePoints(int wins, int podiums, int fastestLaps)
+    + displayPerformance()
+}
+
+abstract class Team {
+    - teamName : String
+    - principal : String
+    + Team(String teamName, String principal)
+    + getTeamName() : String
+    + getPrincipal() : String
+    # showTeamDetails()
+}
+
+class F1Team {
+    - wins : int
+    - podiums : int
+    - fastestLaps : int
+    - totalPoints : int
+    + F1Team(String teamName, String principal)
+    + calculatePoints(int wins, int podiums, int fastestLaps)
+    + displayPerformance()
+    + showTeamDetails()
+}
+
+Team <|-- F1Team
+Performance <|.. F1Team
+
+@enduml
+*/
